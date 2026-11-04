@@ -43,9 +43,6 @@ MySQL 5.5 backend.
   UDP checks against the C++ reference binary and this port on two
   identically seeded databases, compares normalized responses and the
   full resulting database contents — 26/26 checks passing.
-- Docker assets: `docker/docker-compose.yml` (mysql:5.5 + tracker),
-  multi-stage `docker/Dockerfile`, `docker/init-logs.sql` (MyISAM log
-  tables so `insert delayed` works as in the original), sample config.
 - README with build/run/configuration/endpoint documentation and a
   full fidelity-notes list.
 
