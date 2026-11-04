@@ -58,6 +58,9 @@ Requires Rust ≥ 1.75 (edition 2021) — [rustup](https://rustup.rs):
 
 ```sh
 cargo build --release        # binary: target/release/xbt_tracker
+```
+Testing (optional):
+```
 cargo test                   # 38 unit tests
 ```
 
