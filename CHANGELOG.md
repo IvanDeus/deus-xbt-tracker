@@ -1,7 +1,6 @@
 # Changelog
 
 All notable changes to the XBT Tracker Rust port are documented here.
-The format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [1.0.0] — 2026-11-03
 
