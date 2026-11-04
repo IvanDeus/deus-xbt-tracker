@@ -1,0 +1,29 @@
+[package]
+name = "xbt-tracker"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["XBT Rust port contributors"]
+description = "Faithful Rust port of the XBT BitTorrent tracker (Olaf van der Spek), MySQL 5.5 backend"
+license = "GPL-2.0-only"
+readme = "README.md"
+keywords = ["bittorrent", "tracker", "mysql", "xbt"]
+categories = ["network-programming"]
+
+[[bin]]
+name = "xbt_tracker"
+path = "src/main.rs"
+
+[dependencies]
+crc32fast = "1.4"
+flate2 = "1.0"
+libc = "0.2"
+mysql = "28"
+sha1 = "0.10"
+socket2 = "0.5"
+tokio = { version = "1", features = ["rt-multi-thread", "net", "io-util", "time", "signal", "sync", "macros"] }
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
