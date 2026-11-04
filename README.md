@@ -28,7 +28,7 @@ original C++ binary and this port and compares HTTP responses byte-for-byte
 - **Admin endpoints**: `/statistics` (HTML), `/metrics` (Prometheus-style
   text), `/debug` (when `debug = 1`), `redirect_url` / `offline_message`
   support
-- **MySQL 5.5 storage**: torrents, peers and user transfer deltas are
+- **MySQL storage**: torrents, peers and user transfer deltas are
   buffered and flushed in batch upserts exactly like the original
   (`INSERT IGNORE … ON DUPLICATE KEY UPDATE`), optional `announce_log` /
   `scrape_log` tables, live-reloadable configuration from a `config` table
