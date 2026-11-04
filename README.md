@@ -48,7 +48,6 @@ original C++ binary and this port and compares HTTP responses byte-for-byte
 CREATE DATABASE xbt;
 USE xbt;
 SOURCE xbt_tracker.sql;          -- shipped in this repo (upstream schema)
-SOURCE docker/init-logs.sql;     -- only needed for log_announce/log_scrape
 CREATE USER 'xbt'@'%' IDENTIFIED BY 'xbtpass';
 GRANT ALL PRIVILEGES ON xbt.* TO 'xbt'@'%';
 ```
