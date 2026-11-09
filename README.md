@@ -82,6 +82,8 @@ DB read/write cycles → daemonize (if `daemon = 1`) → serve.
 
 ### systemd
 
+Make an XBT service file `vi /etc/systemd/system/xbt.service` containing:
+
 ```ini
 [Unit]
 Description=XBT Tracker (Rust)
@@ -96,8 +98,13 @@ Restart=on-failure
 WantedBy=multi-user.target
 ```
 
-Socket activation is supported: if `LISTEN_FDS` is set by systemd, the
-inherited descriptors are used instead of binding `listen_port`.
+Then reload systemd and enable XBT:
+```
+systemctl daemon-reload
+systemctl enable xbt.service
+systemctl start xbt.service
+systemctl status xbt
+```
 
 ## Configuration
 
